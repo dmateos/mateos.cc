@@ -11,6 +11,8 @@
    		<link rel="openid.delegate" href="http://dmateos.myopenid.com/"/>
 		<link rel="stylesheet" type="text/css" href="styles/index.css"/> 
 		<script type="text/javascript" src="scripts/jquery.js"></script> 
+		<script type="text/javascript" src="scripts/conway/conway.js"></script>
+		<script type="text/javascript" src="scripts/conway/conwayui.js"></script>
 		<script type="text/javascript">
 			// Google analytics
 			var _gaq = _gaq || [];
@@ -25,8 +27,8 @@
 			})();
 		</script>
 		<script type="text/javascript">
-			// Scrolling effect on content. 
 			$(document).ready(function() {
+				// Scrolling effect on content. 
 				var hidden = new Boolean(true);
 				var speed = "slow";
 
@@ -52,6 +54,11 @@
 						hidden=true;
 					}
 				});
+
+				// Conway effect on background. 
+				var pool = new Pool(130,50);
+				pool.init_pool_rand();
+				$('#pooldisplay').conway(pool, 50, 5, "rgb(53,71,89)");
 			});
 		</script>
 	</head>
@@ -88,5 +95,6 @@
 			IRC: dman on <a href="irc://irc.freenode.net">irc.freenode.net</a> <br/>
 			Resume: <a href="/resume.html">html</a>, <a href="/resume.pdf">pdf</a><br/>
 		</div>
+		<!-- <canvas id="pooldisplay"></canvas> -->
 	</body>
 </html> 
