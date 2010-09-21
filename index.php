@@ -11,8 +11,6 @@
    		<link rel="openid.delegate" href="http://dmateos.myopenid.com/"/>
 		<link rel="stylesheet" type="text/css" href="styles/index.css"/> 
 		<script type="text/javascript" src="scripts/jquery.js"></script> 
-		<script type="text/javascript" src="scripts/conway/conway.js"></script>
-		<script type="text/javascript" src="scripts/conway/conwayui.js"></script>
 		<script type="text/javascript">
 			// Google analytics
 			var _gaq = _gaq || [];
@@ -54,11 +52,6 @@
 						hidden=true;
 					}
 				});
-
-				// Conway effect on background. 
-				var pool = new Pool(130,50);
-				pool.init_pool_rand();
-				$('#pooldisplay').conway(pool, 50, 5, "rgb(53,71,89)");
 			});
 		</script>
 	</head>
@@ -81,9 +74,12 @@
 		<div id="projectsdata" class="contentbox">
 			Mostly little programs i've written over the years to get familiar with a particular library or concept, here are the ones i like the most.
 			<p>
-			<a href="http://github.com/dmateos/silicon-genesis">Silicon Genesis</a> Virtual life simulator, it makes fungus looking patterns with SDL.<br/>
-			<a href="http://github.com/dmateos/scratch/tree/master/mr_roboto/">Mr Roboto</a> Modular IRC bot to play around with text parsing and dlfcn. <br/>
+			<a href="http://github.com/dmateos/conway.js">Conway.js</a> 
+			Port of Coneway to javascript using html5 canvas and CSS.
+			<a href="http://mateos.cc/scripts/conway/demo.html">[demo]</a><br/>
 			<a href="http://github.com/dmateos/scratch/tree/master/coneway/">Coneway</a> Conway game of life simulator using very very basic OpenGL. <br/>
+			<a href="http://github.com/dmateos/scratch/tree/master/mr_roboto/">Mr Roboto</a> Modular IRC bot to play around with text parsing and dlfcn. <br/>
+			<a href="http://github.com/dmateos/silicon-genesis">Silicon Genesis</a> Virtual life simulator, it makes fungus looking patterns with SDL.<br/>
 			<a href="http://github.com/dmateos/scratch/tree/master/paperworld/">Paperworld</a> 2d sidescroller game i made to get familiar with Python. <br/>
 			<a href="http://github.com/dmateos/scratch/">Everything else</a> Root of my scratch project dir. <br/>
 			</p>
@@ -95,6 +91,5 @@
 			IRC: dman on <a href="irc://irc.freenode.net">irc.freenode.net</a> <br/>
 			Resume: <a href="/resume.html">html</a>, <a href="/resume.pdf">pdf</a><br/>
 		</div>
-		<!-- <canvas id="pooldisplay"></canvas> -->
 	</body>
 </html> 
