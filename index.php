@@ -10,7 +10,7 @@
 		<link rel="openid.server" href="http://www.myopenid.com/server"/> 
    		<link rel="openid.delegate" href="http://dmateos.myopenid.com/"/>
 		<link rel="stylesheet" type="text/css" href="styles/index.css"/> 
-		<script type="text/javascript" src="scripts/jquery.js"></script> 
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
 		<script type="text/javascript">
 			// Google analytics
 			var _gaq = _gaq || [];
