@@ -43,3 +43,10 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'therubyracer'
+gem 'mysql2'
+
+gem 'devise'
+gem 'kaminari'
+gem 'cancan'
