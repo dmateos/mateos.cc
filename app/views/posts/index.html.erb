@@ -1,0 +1,8 @@
+<h1> Hello posts </h1>
+<% @posts.each do |post| %>
+  <div>
+   <div><%= post.title %></div>
+   <div><%= post.text %></div>
+   -----
+  <div>
+<% end %>
