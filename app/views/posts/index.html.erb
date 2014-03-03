@@ -2,7 +2,9 @@
 <% @posts.each do |post| %>
   <div>
    <div><%= post.title %></div>
-   <div><%= post.text %></div>
+   <div><%= raw(post.text) %></div>
+   <div><%= post.created_at %></div>
+   <div><%= post.updated_at %></div>
    -----
   <div>
 <% end %>
