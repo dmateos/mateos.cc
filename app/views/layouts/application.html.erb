@@ -10,24 +10,24 @@
 </head>
 
 <body>
-	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-		<div class="container-fluid">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<div class="collapse navbar-collapse" style="height: 1px;">
-					<ul class="nav navbar-nav navbar-right">
-						<li> <%= link_to "home", "/" %> </li>
-						<li> <%= link_to "blog", "/posts" %> </li>
-						<li> <%= link_to "about", "/about" %> </li>
-						<li> <%= link_to "contact", "/contact" %> </li>
-					</ul>
-			</div>
-		</div>
-	</div>
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse" style="height: 1px;">
+        <ul class="nav navbar-nav navbar-right">
+          <li> <%= link_to "home", "/" %> </li>
+          <li> <%= link_to "blog", "/posts" %> </li>
+          <li> <%= link_to "about", "/about" %> </li>
+          <li> <%= link_to "contact", "/contact" %> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
   <div class="container pull-right">
     <ul class="list-inline">
@@ -39,7 +39,7 @@
     </ul>
   </div>
 
-	<div class="container">
+  <div class="container">
     <div class="row">
 
       <div class="col-md-8 main-page-grid main-page-big hidden-xs">
@@ -64,28 +64,28 @@
       </div>
     </div>
 
-	  <% if notice or alert %>
-			<div class="alert alert-info alert-dismissable">
-				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-				<%= notice %>
-				<%= alert %>
-			</div>
-		<% end %>
+    <% if notice or alert %>
+      <div class="alert alert-info alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+         <%= notice %>
+         <%= alert %>
+      </div>
+    <% end %>
 
-		<% if can? :admin, @game %>
-				<div class="alert alert-info alert-dismissable">
-					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-					You are admin!
-				</div>
-		<% end %>
+    <% if can? :admin, @game %>
+      <div class="alert alert-info alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        You are admin!
+      </div>
+    <% end %>
 	</div>
 
   <%= yield %>
 
-	<div class="footer navbar navbar-default navbar-fixed-bottom">
+  <div class="footer navbar navbar-default navbar-fixed-bottom">
     <div class="pull-right footer">
       2014 - Daniel Mateos
     </div>
-	</div>
+  </div>
 </body>
 </html>
