@@ -2,16 +2,10 @@ class PagesController < ApplicationController
   def index
   end
 
-  def show
-
+  def about
   end
 
-  def new
-
-  end
-
-  def create
-
+  def contact
   end
 
 end

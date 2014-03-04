@@ -1,11 +1,8 @@
 <div class="container">
   <% @posts.each do |post| %>
-    <div>
-     <div><%= link_to post.title, post %></div>
-     <div><%= raw(post.text) %></div>
-     <div><%= post.created_at %></div>
-     <div><%= post.updated_at %></div>
-     -----
-    <div>
+    <div class="blog-post">
+       <h1><%= link_to post.title, post %></h1>
+       <div><%= post.updated_at %></div>
+    </div>
   <% end %>
 </div>
