@@ -1,13 +1,13 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-8 main-page-grid">
-      Some image!
+    <div class="col-md-8 main-page-grid main-page-big">
+      /dev/mateos
     </div>
     <div class="col-md-4 main-page-grid">
       <h3> Who am i? </h3>
-      woof woof woof woof woof <br/>
-      woof woof woof woof woof <br/>
-      woof woof woof woof woof <br/>
+      I am a Freelance developer with many <br/>
+      years experience building websites and<br/>
+      apps. <br/>
     </div>
   </div>
 
@@ -64,11 +64,12 @@
        <i class="fa fa-rocket fa-5x"></i>
       </div>
 
-      <h4 class="text-center">Latest blog posts</h4>
+      <h4 class="text-center">Recent posts</h4>
       <div class="text-center">
-        woof woof woof woof woof <br/>
-        woof woof woof woof woof <br/>
-        woof woof woof woof woof <br/>
+        <% @posts.each do |post| %>
+          <%= link_to post.title, post %> <br/>
+        <% end %>
+        <%= link_to "more...", "/posts"%>
      </div>
     </div>
 

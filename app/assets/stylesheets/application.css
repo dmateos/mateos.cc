@@ -53,6 +53,10 @@ body {
 	padding: 7px 9px;
 }
 
+.main-page-big {
+  font-size: 80px;
+}
+
 .main-page-grid {
   padding-top: 30px;
   padding-bottom: 50px;
