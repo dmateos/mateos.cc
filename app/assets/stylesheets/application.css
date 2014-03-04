@@ -58,3 +58,10 @@ body {
   padding-bottom: 50px;
 }
 
+.footer {
+  padding-top: 9px;
+  padding-right: 9px;
+  color: #999999;
+  font-size: 12px;
+}
+
