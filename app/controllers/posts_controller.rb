@@ -18,9 +18,8 @@ class PostsController < ApplicationController
     markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, 
                                        :autolink => true, 
                                        :space_after_headers => true)
-    md_text = markdown.render(params[:post][:text])
 
-    @post.text = md_text
+    @post.text = markdown.render(params[:post][:text])
     @post.save
     redirect_to @post
   end

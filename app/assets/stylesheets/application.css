@@ -10,7 +10,7 @@
  *
  *= require_self
  *= require_tree .
- *= require bootstrap.min
+ *= require bootstrap
  */
 
 body {
@@ -50,5 +50,13 @@ body {
 	height: auto;
 	margin-bottom: 15px;
 	padding: 7px 9px;
+}
+
+.main-page-grid {
+  border: 5px;
+  height: 200px;
+  border-style:solid;
+  padding: 1px;
+  margin: 1px;
 }
 
