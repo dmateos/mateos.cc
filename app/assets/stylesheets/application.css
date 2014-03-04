@@ -11,6 +11,7 @@
  *= require_self
  *= require_tree .
  *= require bootstrap
+ *= require font-awesome
  */
 
 body {
@@ -53,10 +54,9 @@ body {
 }
 
 .main-page-grid {
-  border: 5px;
   height: 200px;
-  border-style:solid;
   padding: 1px;
   margin: 1px;
+  padding-top: 30px;
 }
 
