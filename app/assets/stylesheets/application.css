@@ -54,9 +54,7 @@ body {
 }
 
 .main-page-grid {
-  height: 200px;
-  padding: 1px;
-  margin: 1px;
   padding-top: 30px;
+  padding-bottom: 50px;
 }
 

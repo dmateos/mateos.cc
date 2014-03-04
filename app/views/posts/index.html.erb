@@ -1,9 +1,11 @@
-<% @posts.each do |post| %>
-  <div>
-   <div><%= link_to post.title, post %></div>
-   <div><%= raw(post.text) %></div>
-   <div><%= post.created_at %></div>
-   <div><%= post.updated_at %></div>
-   -----
-  <div>
-<% end %>
+<div class="container">
+  <% @posts.each do |post| %>
+    <div>
+     <div><%= link_to post.title, post %></div>
+     <div><%= raw(post.text) %></div>
+     <div><%= post.created_at %></div>
+     <div><%= post.updated_at %></div>
+     -----
+    <div>
+  <% end %>
+</div>
