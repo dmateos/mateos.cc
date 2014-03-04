@@ -40,7 +40,23 @@
   </div>
 
 	<div class="container">
-		<% if notice or alert %>
+    <div class="row">
+      <div class="col-md-8 main-page-grid main-page-big hidden-xs">
+        <div class="header-right">
+         /dev/mateos
+        </div>
+      </div>
+      <div class="col-md-4 main-page-grid">
+        <h3 class="text-center header-right">Who am i?</h3>
+        <div class="text-center">
+         I am a Freelance developer with many <br/>
+         years experience building websites and<br/>
+         apps. <br/>
+       </div>
+      </div>
+    </div>
+
+	  <% if notice or alert %>
 			<div class="alert alert-info alert-dismissable">
 				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 				<%= notice %>

@@ -53,6 +53,13 @@ body {
 	padding: 7px 9px;
 }
 
+.header-right {
+  margin-top:10px;
+}
+
+.header-left {
+}
+
 .main-page-big {
   font-size: 80px;
 }
