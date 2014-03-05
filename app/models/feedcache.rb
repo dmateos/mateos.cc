@@ -10,22 +10,26 @@ class Feedcache < ActiveRecord::Base
     tweets = twitter_client.user_timeline('dmateos', :count => 5)
 
     tweets.each do |tweet|
-      cache_entry = Feedcache.new
-      cache_entry.for = "twitter"
-      cache_entry.title = "null"
-      cache_entry.data = tweet.text
-      cache_entry.save
+      if Feedcache.where(data: tweet.text).empty?
+        cache_entry = Feedcache.new
+        cache_entry.for = "twitter"
+        cache_entry.title = "null"
+        cache_entry.data = tweet.text
+        cache_entry.save
+      end
     end
 
     github_feed = Feedzirra::Feed.fetch_and_parse("http://github.com/dmateos.atom")
     gitfeed = github_feed.entries
 
     gitfeed.each do |git|
-      cache_entry = Feedcache.new
-      cache_entry.for = "github"
-      cache_entry.title = git.title
-      cache_entry.data = "null"
-      cache_entry.save
+      if Feedcache.where(title: git.title).empty? #sometimes itl be the same hrm 
+        cache_entry = Feedcache.new
+        cache_entry.for = "github"
+        cache_entry.title = git.title
+        cache_entry.data = "null"
+        cache_entry.save
+      end
     end
   end
 end

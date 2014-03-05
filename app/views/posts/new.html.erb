@@ -1,16 +1,17 @@
-<%= form_for @post, url: posts_path  do |f| %>
-  <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </p>
+<div class="container">
+  <%= form_for @post, url: posts_path  do |f| %>
+    <div class="form-group">
+      <%= f.label :title %><br>
+      <%= f.text_field :title, size: 160 %>
+    </div>
 
-  <p>
-    <%= f.label :text %><br>
-    <%= f.text_area :text %>
-  </p>
+    <div class="form-group">
+      <%= f.label :text %><br>
+      <%= f.text_area :text, cols: 160, rows: 20  %>
+    </div>
 
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
-
+    <div class="form-group">
+      <%= f.submit "Submit", class: "btn btn-default" %>
+    </div>
+  <% end %>
+</div>
