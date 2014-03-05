@@ -1,6 +1,10 @@
 class PagesController < ApplicationController
   def index
-    @posts = Post::find(:all, :order => 'updated_at desc', :limit => 3)
+    #Feedcache.update
+
+    @posts = Post::order('updated_at desc').limit(3)
+    @tweets = Feedcache.where(for: "twitter").limit(3)
+    @gitfeed = Feedcache.where(for: "github").limit(3)
   end
 
   def about

@@ -47,8 +47,10 @@ end
 gem 'therubyracer'
 gem 'mysql2'
 
-gem 'devise'
-gem 'kaminari'
-gem 'cancan'
-gem 'redcarpet'
-gem 'twitter'
+gem 'devise'    #auth
+gem 'kaminari'  #pagnation
+gem 'cancan'    #permissions
+gem 'redcarpet' #markdown
+gem 'twitter'   #twitter
+gem 'feedzirra' #rss/atoms
+gem 'whenever'  #cron jobs
