@@ -5,6 +5,11 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, 
+                                       :autolink => true, 
+                                       :space_after_headers => true)
+
+    @post.text = markdown.render(@post.text)
   end
 
   def new 
@@ -14,12 +19,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new
     @post.title = params[:post][:title]
-
-    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, 
-                                       :autolink => true, 
-                                       :space_after_headers => true)
-
-    @post.text = markdown.render(params[:post][:text])
+    @post.text = params[:post][:text]
     @post.save
     redirect_to @post
   end
