@@ -15,7 +15,7 @@
  */
 
 body {
-	padding-top: 70px;
+	padding-top: 50px;
 	padding-bottom: 70px;
 }
 
@@ -58,6 +58,14 @@ body {
 }
 
 .header-left {
+}
+
+.header {
+  background-color: #32466B;
+}
+
+.header-social {
+  padding-top: 10px;
 }
 
 .main-page-big {
