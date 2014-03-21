@@ -15,8 +15,9 @@
  */
 
 body {
-	padding-top: 50px;
+	padding-top: 30px;
 	padding-bottom: 70px;
+  background-color: #EEEDF5 !important;
 }
 
 .form-signup, .form-signin {
@@ -53,40 +54,40 @@ body {
 	padding: 7px 9px;
 }
 
-.header-right {
-  margin-top:10px;
-}
-
-.header-left {
-}
+.navbar-nav > li > a {padding-top:5px !important; padding-bottom:5px !important;}
+.navbar {min-height:30px !important}
 
 .header {
-  background-color: #32466B;
+  background-color: #363A47;
+  color: #CFCCE0;
+  padding-left: 150px;
 }
 
 .header-social {
   padding-top: 10px;
 }
 
-.main-page-big {
+.header-logo-big {
   font-size: 80px;
 }
 
-.main-page-big-small {
+.header-logo-small {
   font-size: 50px;
 }
 
-.main-page-grid {
-  padding-top: 30px;
-  padding-bottom: 50px;
+.header-logo-grid {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.footer {
-  padding-top: 9px;
-  padding-right: 9px;
-  color: #999999;
-  font-size: 12px;
+.soc-icon {
+  color: #CFCCE0;
 }
+
+.main-content {
+  padding-top: 90px;
+}
+
 
 .blog-post {
   padding-bottom: 10px;
