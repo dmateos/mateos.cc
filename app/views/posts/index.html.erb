@@ -4,10 +4,12 @@
   <% end %>
   <% @posts.each do |post| %>
     <div class="blog-post">
-       <h1><%= link_to post.title, post %></h1>
-       <div><%= post.updated_at %></div>
-       <div><%= link_to "edit", edit_post_path(post) %></div>
-       <div><%= link_to "destroy", post_path(post), method: :delete, data: { Confirm: 'OK?'} %></div>
+      <h1><%= link_to post.title, post %></h1>
+      <div><%= post.updated_at %></div>
+        <% if can? :manage, Post %>
+          <div><%= link_to "edit", edit_post_path(post) %></div>
+          <div><%= link_to "destroy", post_path(post), method: :delete, data: { Confirm: 'OK?'} %></div>
+        <% end %>
     </div>
   <% end %>
 </div>
