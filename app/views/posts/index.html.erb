@@ -1,5 +1,7 @@
 <div class="container">
-  <div> <%= link_to "new", new_post_path %>
+  <% if can? :manage, Post %>
+    <div> <%= link_to "new", new_post_path %>
+  <% end %>
   <% @posts.each do |post| %>
     <div class="blog-post">
        <h1><%= link_to post.title, post %></h1>
