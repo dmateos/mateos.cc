@@ -1,6 +1,6 @@
 <div class="container">
   <% if policy(Post).create? %>
-    <div> <%= link_to "new", new_post_path %>
+    <div> <%= link_to "new", new_post_path %> </div>
   <% end %>
   <% @posts.each do |post| %>
     <div class="blog-post">

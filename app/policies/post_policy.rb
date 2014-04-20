@@ -2,9 +2,17 @@ class PostPolicy
   attr_reader :user, :post
 
   def initialize(user, post)
-    raise Pundit::NotAuthorizedError, "must be logged in" unless user
+    user ||= User.new
     @user = user
     @post = post
+  end
+
+  def index
+    true
+  end
+
+  def show
+    true
   end
 
   def create?
@@ -12,6 +20,14 @@ class PostPolicy
   end
 
   def new?
+    user.admin?
+  end
+
+  def edit?
+    user.admin?
+  end
+
+  def destroy?
     user.admin?
   end
 end
