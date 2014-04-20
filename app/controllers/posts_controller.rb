@@ -1,6 +1,4 @@
 class PostsController < ApplicationController
-  load_and_authorize_resource
-
   def index
     @posts = Post::order('created_at desc')
   end
@@ -16,10 +14,13 @@ class PostsController < ApplicationController
 
   def new 
     @post = Post.new
+    authorize @post
   end
 
   def create
     @post = Post.new
+    authorize @post
+
     @post.title = params[:post][:title]
     @post.text = params[:post][:text]
     @post.save

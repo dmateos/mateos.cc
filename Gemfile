@@ -49,7 +49,7 @@ gem 'mysql2'
 
 gem 'devise'    #auth
 gem 'kaminari'  #pagnation
-gem 'cancan'    #permissions
+gem 'pundit' #permissions
 gem 'redcarpet' #markdown
 gem 'twitter'   #twitter
 gem 'feedzirra' #rss/atoms

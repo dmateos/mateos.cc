@@ -59,13 +59,6 @@
     </div>
   <% end %>
 
-  <% if can? :admin, :all %>
-    <div class="alert alert-info alert-dismissable">
-      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-      You are admin!
-    </div>
-  <% end %>
-
   <%= yield %>
 
 </body>
