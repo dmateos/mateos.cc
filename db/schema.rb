@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140322130342) do
+ActiveRecord::Schema.define(version: 20140420063752) do
 
   create_table "comments", force: true do |t|
     t.string   "commenter"
@@ -22,6 +22,15 @@ ActiveRecord::Schema.define(version: 20140322130342) do
   end
 
   add_index "comments", ["post_id"], name: "index_comments_on_post_id", using: :btree
+
+  create_table "contacts", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "subject"
+    t.text     "message"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "feedcaches", force: true do |t|
     t.string   "for"

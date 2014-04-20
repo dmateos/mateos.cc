@@ -1,3 +1,42 @@
 <div class="container">
-  <h1> Contact </h1>
+  <div class="row">
+    <div class="col-md-8">
+      <h2>Contact me directly</h2>
+      <%= form_for @contact, url: contact_path do |f| %>
+        <div class="form-group">
+          <div><%= f.label :name %> </div>
+          <%= f.text_field :name, size: 80 %>
+        </div>
+
+        <div class="form-group">
+          <div><%= f.label :email %> </div>
+          <%= f.text_field :email, size: 80 %>
+        </div>
+
+        <div class="form-group">
+          <div><%= f.label :subject %> </div>
+          <%= f.text_field :subject, size: 80 %>
+        </div>
+
+        <div class="form-group">
+          <div><%= f.label :message %> </div>
+          <%= f.text_area :message, cols: 80, rows: 20 %>
+        </div>
+
+        <div class="form-group">
+          <%= f.submit "Submit", class: "btn btn-default" %>
+        </div>
+      <%end %>
+    </div>
+    <div class="col-md-4">
+      <h2>Or via these services</h2>
+      <ul class="list-inline">
+        <li><a href="https://www.facebook.com/dmateos"><i class="fa fa-facebook-square fa-4x"></i></a></li>
+        <li><a href="https://twitter.com/dmateos"><i class="fa fa-twitter-square fa-4x"></i></a></li>
+        <li><a href="http://www.linkedin.com/profile/view?id=54393721"><i class="fa fa-linkedin-square fa-4x"></i></a></li>
+        <li><a href="https://github.com/dmateos"><i class="fa fa-github-square fa-4x"></i></a></li>
+        <li><a href="https://mateos.cc/rss"><i class="fa fa-rss-square fa-4x"></i></a></li>
+      </ul>
+    </div>
+  </div>
 </div>
