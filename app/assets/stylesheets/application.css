@@ -87,7 +87,15 @@ body {
   padding-top: 90px;
 }
 
-
 .blog-post {
   padding-bottom: 10px;
 }
+
+#map-div {
+}
+
+#map_canvas {
+  width: 600px;
+  height: 300px;
+}
+

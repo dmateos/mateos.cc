@@ -1,6 +1,8 @@
+<%= render "shared/map"%>
+
 <div class="container">
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-6">
       <h2>Contact me directly</h2>
       <%= form_for @contact, url: contacts_path do |f| %>
         <div class="form-group">
@@ -36,6 +38,10 @@
         <li><a href="http://www.linkedin.com/profile/view?id=54393721"><i class="fa fa-linkedin-square fa-4x"></i></a></li>
         <li><a href="https://github.com/dmateos"><i class="fa fa-github-square fa-4x"></i></a></li>
       </ul>
+    </div>
+    <div class="col-md-4 map-div">
+      <h2>Or buy me a coffee... </h2>
+      <div id="map_canvas"></div>
     </div>
   </div>
 </div>

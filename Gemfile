@@ -47,6 +47,7 @@ end
 gem 'therubyracer'
 gem 'mysql2'
 
+gem 'jquery-turbolinks'
 gem 'devise'    #auth
 gem 'kaminari'  #pagnation
 gem 'pundit' #permissions
