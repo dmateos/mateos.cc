@@ -7,23 +7,23 @@ class PostPolicy
     @post = post
   end
 
-  def index
+  def show?
     true
   end
 
-  def show
-    true
+  def new?
+    create?
   end
 
   def create?
     user.admin?
   end
 
-  def new?
-    user.admin?
+  def edit?
+    update?
   end
 
-  def edit?
+  def update?
     user.admin?
   end
 

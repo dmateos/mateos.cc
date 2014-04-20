@@ -1,5 +1,5 @@
 <div class="container">
-  <%= form_for @post, url: posts_path  do |f| %>
+  <%= form_for @post do |f| %>
     <div class="form-group">
       <div><%= f.label :title %></div>
       <%= f.text_field :title, size: 160 %>
