@@ -7,14 +7,6 @@ class PagesController < ApplicationController
     @gitfeed = Feedcache.where(for: "github").limit(3)
   end
 
-  def about
-  end
-
-  def contact
-    @contact = Contact.new
-  end
-
   def admin
   end
-
 end

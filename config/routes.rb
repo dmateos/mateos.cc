@@ -1,8 +1,8 @@
 MateosCc::Application.routes.draw do
   devise_for :users
-  get 'about', to: 'pages#about'
-  get 'contact', to: 'pages#contact'
   root :to => 'pages#index'
+  get 'contact', to: 'contacts#index'
 
+  resources :contacts
   resources :posts
 end

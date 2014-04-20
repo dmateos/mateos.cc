@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-8">
       <h2>Contact me directly</h2>
-      <%= form_for @contact, url: contact_path do |f| %>
+      <%= form_for @contact, url: contacts_path do |f| %>
         <div class="form-group">
           <div><%= f.label :name %> </div>
           <%= f.text_field :name, size: 80 %>
