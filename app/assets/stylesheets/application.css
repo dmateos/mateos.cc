@@ -91,11 +91,12 @@ body {
   padding-bottom: 10px;
 }
 
-#map-div {
+.map-div {
+  padding-top: 100px;
 }
 
 #map_canvas {
-  width: 600px;
-  height: 300px;
+  width: 500px;
+  height: 400px;
 }
 
