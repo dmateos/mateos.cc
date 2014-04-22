@@ -4,30 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>/dev/mateos</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 
 <body>
-  <div class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
-    <div class="container-fluid">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <div class="collapse navbar-collapse" style="height: 1px;">
-        <ul class="nav navbar-nav navbar-right">
-          <li> <%= link_to "home", "/" %> </li>
-          <li> <%= link_to "blog", "/posts" %> </li>
-          <li> <%= link_to "contact", "/contact" %> </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
   <div class="header">
     <div class="container pull-right header-social">
       <ul class="list-inline">
@@ -47,6 +29,26 @@
         <div class="col-md-8 header-logo-grid header-logo-small visible-xs">
           /dev/dmateos
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="navbar navbar-default navbar-inverse" role="navigation">
+    <div class="container-fluid">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse" style="height: 1px;">
+        <div class="container">
+          <ul class="nav navbar-nav">
+            <li> <%= link_to "home", "/" %> </li>
+           <li> <%= link_to "blog", "/posts" %> </li>
+           <li> <%= link_to "contact", "/contact" %> </li>
+         </ul>
+      </div>
       </div>
     </div>
   </div>

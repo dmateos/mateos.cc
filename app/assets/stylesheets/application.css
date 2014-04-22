@@ -15,7 +15,6 @@
  */
 
 body {
-	padding-top: 30px;
 	padding-bottom: 70px;
   background-color: #EEEDF5 !important;
 }
@@ -55,7 +54,10 @@ body {
 }
 
 .navbar-nav > li > a {padding-top:5px !important; padding-bottom:5px !important;}
-.navbar {min-height:30px !important}
+.navbar {
+  min-height:30px !important;
+  border-radius: 0px !important;
+}
 
 .header {
   background-color: #363A47;
