@@ -1,17 +1,1 @@
-<div class="container">
-  <%= form_for @post do |f| %>
-    <div class="form-group">
-      <div><%= f.label :title %></div>
-      <%= f.text_field :title, size: 160, class: "form-control" %>
-    </div>
-
-    <div class="form-group">
-      <div><%= f.label :text %></div>
-      <%= f.text_area :text, cols: 160, rows: 20, class: "form-control"  %>
-    </div>
-
-    <div class="form-group">
-      <%= f.submit "Submit", class: "btn btn-default" %>
-    </div>
-  <% end %>
-</div>
+<%= render "shared/posts_form" %>
