@@ -23,7 +23,9 @@ class Feedcache < ActiveRecord::Base
     gitfeed = github_feed.entries
 
     gitfeed.each do |git|
-      if Feedcache.where(title: git.title).empty? #sometimes itl be the same hrm 
+      if c = Feedcache.where(title: git.title).first
+        c.save
+      else
         cache_entry = Feedcache.new
         cache_entry.for = "github"
         cache_entry.title = git.title
