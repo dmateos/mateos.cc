@@ -8,5 +8,10 @@ class PagesController < ApplicationController
   end
 
   def admin
+
+  end
+
+  def test
+
   end
 end
