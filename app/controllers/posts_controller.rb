@@ -26,6 +26,7 @@ class PostsController < ApplicationController
 
     @post.title = params[:post][:title]
     @post.text = params[:post][:text]
+    @post.user = current_user
     @post.save
     redirect_to @post
   end
@@ -40,6 +41,7 @@ class PostsController < ApplicationController
     authorize @post
     @post.title = params[:post][:title]
     @post.text = params[:post][:text]
+    @post.user = current_user
     @post.save
     redirect_to @post
   end
