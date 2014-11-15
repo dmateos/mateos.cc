@@ -58,6 +58,14 @@ body {
 }
 
 .carousel-inner > .item > img {
-      margin: 0 auto;
+  margin: 0 auto;
+}
+
+.navbar-icons {
+  padding-top: 10px;
+}
+
+.main-content {
+  padding-bottom: 10px;
 }
 
