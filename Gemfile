@@ -52,5 +52,6 @@ gem 'kaminari'  #pagnation
 gem 'pundit' #permissions
 gem 'redcarpet' #markdown
 gem 'twitter'   #twitter
-gem 'feedzirra' #rss/atoms
+gem 'feedjira' #rss/atoms
 gem 'whenever'  #cron jobs
+gem "twitter-bootstrap-rails" #bootstrap

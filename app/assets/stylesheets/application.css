@@ -10,13 +10,12 @@
  *
  *= require_self
  *= require_tree .
- *= require bootstrap
  *= require font-awesome
  */
 
 body {
-	padding-bottom: 70px;
-  background-color: #EEEDF5 !important;
+  padding-top: 50px;
+  padding-bottom: 20px;
 }
 
 .form-signup, .form-signin {
@@ -53,53 +52,12 @@ body {
 	padding: 7px 9px;
 }
 
-.navbar-nav > li > a {padding-top:5px !important; padding-bottom:5px !important;}
-.navbar {
-  min-height:30px !important;
-  border-radius: 0px !important;
-}
-
-.header {
-  background-color: #363A47;
-  color: #CFCCE0;
-}
-
-.header-social {
-  padding-top: 10px;
-}
-
-.header-logo-big {
-  font-size: 80px;
-}
-
-.header-logo-small {
-  font-size: 50px;
-}
-
-.header-logo-grid {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.soc-icon {
-  color: #CFCCE0;
-}
-
-.main-content {
-  padding-top: 90px;
-}
-
-.blog-post {
-  padding-bottom: 10px;
-}
-
-.map-div {
-  padding-top: 100px;
-}
-
 #map_canvas {
   width: 500px;
   height: 400px;
 }
 
+.carousel-inner > .item > img {
+      margin: 0 auto;
+}
 

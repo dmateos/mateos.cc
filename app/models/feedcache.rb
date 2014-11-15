@@ -22,7 +22,7 @@ class Feedcache < ActiveRecord::Base
       end
     end
 
-    github_feed = Feedzirra::Feed.fetch_and_parse("http://github.com/dmateos.atom")
+    github_feed = Feedjira::Feed.fetch_and_parse("http://github.com/dmateos.atom")
     gitfeed = github_feed.entries
 
     gitfeed.each do |git|
