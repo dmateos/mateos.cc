@@ -11,7 +11,7 @@ class PostPolicy < ApplicationPolicy
   end
 
   def show?
-    true
+    admin? or post.published?
   end
 
   def new?
@@ -19,7 +19,7 @@ class PostPolicy < ApplicationPolicy
   end
 
   def create?
-    user.admin? if not user.nil?
+    admin?
   end
 
   def edit?
@@ -27,10 +27,14 @@ class PostPolicy < ApplicationPolicy
   end
 
   def update?
-    user.admin? if not user.nil?
+    admin?
   end
 
   def destroy?
-    user.admin? if not user.nil?
+    admin?
+  end
+
+  def admin?
+    user.admin if not user.nil?
   end
 end

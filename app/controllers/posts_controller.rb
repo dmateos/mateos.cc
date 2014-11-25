@@ -2,7 +2,11 @@ class PostsController < ApplicationController
   after_action :verify_authorized, :except => :index
 
   def index
-    @posts = Post::order('created_at desc')
+    if policy(Post).admin?
+      @posts = Post::order('created_at desc')
+    else
+      @posts = Post::order('created_at desc').where(published: true)
+    end
   end
 
   def show
@@ -26,7 +30,8 @@ class PostsController < ApplicationController
 
     @post.title = params[:post][:title]
     @post.text = params[:post][:text]
-    @post.user = current_user
+    @post.published = params[:post][:published]
+    #@post.user = current_user
     @post.save
     redirect_to @post
   end
@@ -41,7 +46,8 @@ class PostsController < ApplicationController
     authorize @post
     @post.title = params[:post][:title]
     @post.text = params[:post][:text]
-    @post.user = current_user
+    @post.published = params[:post][:published]
+    #@post.user = current_user
     @post.save
     redirect_to @post
   end
