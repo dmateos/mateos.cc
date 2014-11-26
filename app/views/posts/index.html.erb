@@ -5,6 +5,9 @@
   <% @posts.each do |post| %>
     <div class="blog-post">
       <h1><%= link_to post.title, post %></h1>
+      <% if not post.published %>
+        <div> unpublished </div>
+      <%end %>
       <div><%= post.updated_at %></div>
         <% if policy(post).create? %>
           <div><%= link_to "edit", edit_post_path(post) %></div>
