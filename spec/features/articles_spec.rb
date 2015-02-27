@@ -21,6 +21,10 @@ feature "visitor browses articles" do
     expect(page).to have_content(article.body)
   end
 
+  scenario "goes to an article url via nice name" do
+    pending "implement this"
+  end
+
   scenario "cant see unpublished articles" do
     article_page.visit_page
     expect(page).to have_no_content(unpublished_article.title)

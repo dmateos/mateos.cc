@@ -9,7 +9,9 @@ class UsersPage
     visit "login"
   end
 
-  def create_user(username, email, password)
+  def create_user(username, email, password, password_confirm = nil)
+    password_confirm ||= password
+
     fill_in "Username", with: username
     fill_in "Email", with: email
     fill_in "Password", with: password

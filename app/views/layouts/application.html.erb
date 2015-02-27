@@ -82,6 +82,16 @@
               <% end %>
             </ul>
           </div><!--/.well -->
+
+          <div class="well sidebar-nav">
+            <h3>Recent posts</h3>
+            <ul class="nav nav-list">
+              <% policy_scope(Article).limit(5).each do |article| %>
+                <li> <%= link_to article.title, article %> </li>
+              <% end %>
+            </ul>
+          </div><!--/.well -->
+
         </div><!--/span-->
       </div><!--/row-->
 
