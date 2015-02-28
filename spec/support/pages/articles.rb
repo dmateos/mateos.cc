@@ -7,7 +7,7 @@ class ArticlesPage
 
   def goto_article(name)
     visit "/articles"
-    click_link name
+    first(:link, name).click
   end
 
   def goto_article_direct(id)

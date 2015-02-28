@@ -50,8 +50,8 @@
           <ul class="nav navbar-nav">
             <li><%= link_to "home", root_path  %></li>
             <li><%= link_to "blog", articles_path  %></li>
-            <li><%= link_to "about", "" %> </li>
-            <li><%= link_to "contact", articles_path  %></li>
+            <li><%= link_to "about", about_path %> </li>
+            <li><%= link_to "contact", contact_path  %></li>
           </ul>
           <ul class="narbar-nav navbar-right list-inline navbar-icons">
             <li><a href="https://www.facebook.com/dmateos"><i class="fa fa-facebook-square fa-2x soc-icon"></i></a></li>
@@ -86,7 +86,7 @@
           <div class="well sidebar-nav">
             <h3>Recent posts</h3>
             <ul class="nav nav-list">
-              <% policy_scope(Article).limit(5).each do |article| %>
+              <% policy_scope(Article).limit(5).reverse.each do |article| %>
                 <li> <%= link_to article.title, article %> </li>
               <% end %>
             </ul>
@@ -98,9 +98,15 @@
               <ul class="nav nav-list">
                 <li> <%= link_to "Users", users_path %></li>
                 <li> <%= link_to "Messages", messages_path %></li>
+                <li> <%= link_to "New article", new_article_path %></li>
               </ul>
             </div><!--/.well -->
           <% end %>
+
+          <div class="well sidebar-nav">
+            <a class="twitter-timeline" href="https://twitter.com/dmateos" data-widget-id="571401933366108160">Tweets by @dmateos</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          </div>
 
         </div><!--/span-->
       </div><!--/row-->

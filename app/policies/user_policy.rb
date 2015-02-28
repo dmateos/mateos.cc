@@ -15,7 +15,7 @@ class UserPolicy
   end
 
   def new?
-    true
+    create?
   end
 
   def create?
@@ -23,7 +23,7 @@ class UserPolicy
   end
 
   def edit?
-    @user and @user.admin?
+    update?
   end
 
   def upate?

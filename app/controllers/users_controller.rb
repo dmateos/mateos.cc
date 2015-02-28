@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  after_action :verify_authorized, :except => :index
 
   def index
     @users = User.all
@@ -10,19 +11,20 @@ class UsersController < ApplicationController
   end
 
   def new
+    @user = User.new
+    authorize @user
+
     if current_user
       flash[:notice] = "already authenticated"
       redirect_to root_path
-    else
-      @user = User.new
-      authorize @user
     end
   end
 
   def create
+    @user = User.new(user_params)
+    authorize @user
+
     if User.where(username: params[:user][:username]).first.nil?
-      @user = User.new(user_params)
-      authorize @user
       @user.save
       flash[:notice] = "new user created"
     else

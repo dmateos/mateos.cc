@@ -4,8 +4,11 @@ Rails.application.routes.draw do
   get "login" => "sessions#new"
   post "login" => "sessions#create"
   get "logout" => "sessions#destroy"
-  get "dashboard" => "users#dashboard"
+
+  get "about" => "pages#about"
+  get "contact" => "messages#new"
 
   resources :users
   resources :articles
+  resources :messages
 end
