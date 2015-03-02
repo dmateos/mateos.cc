@@ -1,11 +1,12 @@
 <%- model_class = Article -%>
 <div class="page-header">
   <h1> <%= @article.title %> </h1>
+  <p> <%= @article.nice_date %> </p>
 </div>
 
-<dl class="dl-horizontal">
-  <dd><%= raw(@article.body) %></dd>
-</dl>
+<div>
+  <%= raw(@article.body) %>
+</div>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
               articles_path, :class => 'btn btn-default'  %>
