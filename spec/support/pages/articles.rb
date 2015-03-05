@@ -17,4 +17,12 @@ class ArticlesPage
   def goto_article_nice(name)
     visit "/articles/#{nice}"
   end
+  
+  def new_article(title, body, published = true)
+    visit "/articles/new"
+    fill_in "Title", with: title
+    fill_in "Body", with: body
+    check "Published"
+    click_button "Create Article"
+  end
 end

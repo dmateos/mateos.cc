@@ -63,4 +63,9 @@ feature "admin browses articles" do
     article_page.goto_article_direct(unpublished_article.id)
     expect(page).to have_content(unpublished_article.body)
   end
+
+  scenario "creates a new article" do
+    article_page.new_article("test new", "test article body", true) 
+    expect(page).to have_content("test article")
+  end
 end
