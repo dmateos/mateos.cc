@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "logout" => "sessions#destroy"
 
   get "about" => "pages#about"
+  get "projects" => "pages#projects"
   get "contact" => "messages#new"
 
   resources :users
