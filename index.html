@@ -1,11 +1,12 @@
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>mateos.cc</title>
+    <title>Daniel Mateos</title>
     <style type="text/css">
       body {
-        background: #322f30;
+        background: #2C333C;
         font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
       }
 
@@ -19,6 +20,11 @@
         color: white;
         text-align: right;
         line-height: 100px;
+      }
+
+      .about {
+        color: white;
+        margin-top: 25px;
       }
 
       .center {
@@ -98,6 +104,7 @@
    function autorun()
    {
       $("body").toasty();
+      $("body").toasty('pop');
       $("#d").click(function() {
         $("body").toasty('pop');
       });
@@ -119,12 +126,24 @@
     <div class="head"> <span class="color">m</span>ateos </div>
     <div class="head"> <span class="color">cc</span> </div>
 
+    <div class="about">
+      <p>
+      Hi, my name is Daniel Mateos, i am a Software Engineer based in Melbourne, Australia.
+      </p>
+
+      <p>
+      See links for how to contact me.
+      </p>
+
+      <p>
+      Click the "d" for a fun time.
+      </p>
+    </div>
+
     <div class="small">
       <a href="https://github.com/dmateos">github</a>
-      <a href="games.html">games</a>
       <a href="https://twitter.com/dmateos">twitter</a>
       <a href="https://www.linkedin.com/in/daniel-mateos-a2127116/">linkedin</a>
-      <a href="key.asc.txt">gpg</a>
     </div>
   </div>
   </body>
