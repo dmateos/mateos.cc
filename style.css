@@ -1,0 +1,67 @@
+body {
+  background: #2C333C;
+  font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+}
+
+.show-dan{
+-webkit-animation:showToastyGuy 1s;
+   -moz-animation:showToastyGuy 1s;
+     -o-animation:showToastyGuy 1s;
+        animation:showToastyGuy 1s;
+}
+
+@-webkit-keyframes showToastyGuy
+{
+  0% {right: -400px;}
+  40% {right: 0;}
+  60% {right: 0;}
+  100% {right: -400px;}
+}
+
+@-moz-keyframes showToastyGuy
+{
+  0% {right: -400px;}
+  40% {right: 0;}
+  60% {right: 0;}
+  100% {right: -400px;}
+}
+
+@-o-keyframes showToastyGuy
+{
+  0% {right: -400px;}
+  40% {right: 0;}
+  60% {right: 0;}
+  100% {right: -400px;}
+}
+
+@keyframes showToastyGuy
+{
+  0% {right: -400px;}
+  40% {right: 0;}
+  60% {right: 0;}
+  100% {right: -400px;}
+}
+
+.main-header {
+  color: #e37a09;
+  font-size: 60px;
+  padding-bottom: 25px;
+}
+
+.main-content {
+  color: #1eed07;
+  font-size: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.about-content {
+  color: #ffffff;
+  padding-top: 50px;
+}
+
+
+a, a:visited {
+  color: #1eed07;
+}
+
