@@ -84,7 +84,7 @@
         100% {right: -400px;}
       }
 
-      #particles-js {
+      #display {
         position: absolute;
         top: 0;
         left: 0;
@@ -98,8 +98,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.5.3/modernizr.min.js" type="text/javascript"></script>
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" type="text/javascript"></script>
   <script src="jquery.toasty.js" type="text/javascript"></script>
+  <script type="text/javascript" src="conway.js"></script>
+  <script type="text/javascript" src="conwayui.js"></script>
   <script type="text/javascript">
    function autorun()
    {
@@ -115,12 +116,18 @@
   </script>
 
   <script>
-    particlesJS.load('particles-js', 'particles.json', function() {
-      console.log('callback - particles.js config loaded');
+    $(document).ready(function() {
+      var pool = new Pool(1024, 1024);
+      pool.init_pool_rand();
+      pool.locked = false;
+      pool.CompDone = function() { };
+
+      $('#display').conway(pool, 50, "rgb(255,180,0)");
     });
   </script>
 
-  <div id="particles-js"></div>
+  <canvas id="display"></canvas>
+
   <div class="center">
     <div class="head"> <span id="d" class="color">d</span>aniel</div>
     <div class="head"> <span class="color">m</span>ateos </div>
