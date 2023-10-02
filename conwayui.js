@@ -28,8 +28,8 @@
 	jQuery.fn.conway = function(pool, timer, colour) {
 		var canvas = this[0];
 		var context = canvas.getContext('2d');
-		var xblocksize = (canvas.width / pool.xsize);
-		var yblocksize = (canvas.height / pool.ysize);
+		var xblocksize = 2;
+		var yblocksize = 2;
 		var interval;
 
 		/* Draws the pool to a canvas. */

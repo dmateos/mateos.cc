@@ -117,12 +117,12 @@
 
   <script>
     $(document).ready(function() {
-      var pool = new Pool(1024, 1024);
+      var pool = new Pool(200, 200);
       pool.init_pool_rand();
       pool.locked = false;
       pool.CompDone = function() { };
 
-      $('#display').conway(pool, 50, "rgb(255,180,0)");
+      $('#display').conway(pool, 10, "rgb(68,84,110)");
     });
   </script>
 
