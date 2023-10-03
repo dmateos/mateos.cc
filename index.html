@@ -117,16 +117,18 @@
 
   <script>
     $(document).ready(function() {
+      var canvas = $('#display')[0];
+
       var pool = new Pool(200, 200);
       pool.init_pool_rand();
       pool.locked = false;
       pool.CompDone = function() { };
 
-      $('#display').conway(pool, 10, "rgb(68,84,110)");
+      $('particles-js').conway(pool, 10, "rgb(68,84,110)");
     });
   </script>
 
-  <canvas id="display"></canvas>
+  <canvas id="particles-js"></canvas>
 
   <div class="center">
     <div class="head"> <span id="d" class="color">d</span>aniel</div>
