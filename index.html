@@ -264,7 +264,7 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         // Typing effect
-        const text = "Software Engineer @ Melbourne, Australia";
+        const text = "$ Software Engineer @ Melbourne, Australia";
         const typingElement = document.querySelector(".typing");
         let i = 0;
 
@@ -280,7 +280,8 @@
 
         // Your existing background effect code
         $(document).ready(function () {
-          var effect_chance = Math.round(Math.random());
+          var effect_chance = Math.round(Math.random() * 19) === 0;
+
           if (effect_chance == 0) {
             particlesJS.load("particles-js", "particles.json", function () {});
           } else {
